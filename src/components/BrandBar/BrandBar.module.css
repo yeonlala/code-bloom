@@ -1,0 +1,53 @@
+.bar {
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.inner {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 7px 24px;
+}
+
+.brand {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.slogan,
+.en,
+.copy {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.copy {
+  margin-left: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 840px) {
+  .inner {
+    flex-wrap: wrap;
+    gap: 2px 8px;
+    padding: 8px 16px;
+  }
+
+  .en {
+    display: none;
+  }
+
+  .copy {
+    flex-basis: 100%;
+    margin-left: 0;
+  }
+}

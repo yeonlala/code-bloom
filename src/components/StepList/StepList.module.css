@@ -1,0 +1,126 @@
+.rail {
+  position: sticky;
+  top: 24px;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 48px);
+  min-height: 0;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: auto;
+  min-height: 0;
+}
+
+.track {
+  margin: 16px 8px 6px;
+  color: var(--faint);
+  font-size: 12px;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+}
+
+.list li:first-child .track {
+  margin-top: 0;
+}
+
+.done,
+.total {
+  margin-left: 6px;
+  font-variant-numeric: tabular-nums;
+}
+
+.done {
+  color: var(--pass);
+}
+
+.total {
+  color: var(--muted);
+}
+
+.step,
+.current,
+.passed {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+  padding: 7px 8px;
+  border: 0;
+  border-radius: 8px;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+  font-size: 14px;
+}
+
+.step {
+  color: var(--muted);
+  background: transparent;
+}
+
+.passed {
+  color: var(--pass);
+  background: var(--pass-bg);
+}
+
+.current {
+  position: relative;
+  color: var(--ink);
+  background: transparent;
+}
+
+.current::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  bottom: 7px;
+  width: 3px;
+  border-radius: 2px;
+  background: var(--kept);
+}
+
+.mark,
+.markEmpty {
+  width: 1em;
+  flex: none;
+  font-weight: 700;
+}
+
+.mark {
+  color: var(--pass);
+}
+
+.current .mark {
+  color: var(--kept);
+}
+
+.num {
+  width: 1.6em;
+  color: var(--muted);
+  font-family: Consolas, "Cascadia Mono", "SFMono-Regular", ui-monospace, monospace;
+  font-size: 12px;
+}
+
+.passed .num {
+  color: var(--pass);
+}
+
+.current .num {
+  color: var(--kept);
+}
+
+@media (max-width: 840px) {
+  .rail {
+    position: static;
+    max-height: none;
+  }
+
+  .list {
+    max-height: 220px;
+  }
+}

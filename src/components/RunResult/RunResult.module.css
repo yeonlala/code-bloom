@@ -1,0 +1,15 @@
+.pass,
+.fail {
+  margin: 14px 0 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.pass {
+  color: var(--pass);
+  font-weight: 650;
+}
+
+.fail {
+  color: var(--fail);
+}

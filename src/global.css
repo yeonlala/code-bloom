@@ -1,0 +1,43 @@
+:root {
+  --paper: #f3f0e8;
+  --ink: #1c1915;
+  --muted: #6d665e;
+  --line: #d4cbbd;
+  --surface: #fffdf8;
+  --faint: #9a9288;
+  --editor: #1c1915;
+  --editor-ink: #f3efe6;
+  --editor-dim: #8d8478;
+  --code-key: #e2c48a;
+  --code-string: #9dceb6;
+  --kept: #23483e;
+  --kept-bg: #e7f0ec;
+  --pass: #157a3e;
+  --pass-bg: #e3f3ea;
+  --pass-bright: #3ecf7a;
+  --fail: #9c3d2e;
+  --refresh: #6f4a28;
+  --refresh-bg: #f8f1e6;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+textarea {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}

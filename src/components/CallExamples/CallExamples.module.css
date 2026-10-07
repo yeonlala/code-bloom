@@ -1,0 +1,52 @@
+.examples {
+  margin: 0 0 4px;
+}
+
+.title {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.list {
+  margin: 0;
+  padding: 12px;
+  list-style: none;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: baseline;
+  margin: 0;
+  padding: 6px 0;
+  font-family: Consolas, "Cascadia Mono", "SFMono-Regular", ui-monospace, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.item + .item {
+  border-top: 1px solid var(--line);
+}
+
+.code,
+.result {
+  font-family: inherit;
+}
+
+.code {
+  color: var(--ink);
+}
+
+.arrow {
+  color: var(--muted);
+}
+
+.result {
+  color: var(--kept);
+}

@@ -1,0 +1,65 @@
+.panel {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--editor);
+  color: var(--editor-ink);
+}
+
+.title,
+.empty {
+  margin: 0;
+  color: var(--editor-dim);
+  font-size: 12px;
+}
+
+.list {
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.line {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 4px 10px;
+  padding: 6px 0;
+}
+
+.line + .line {
+  border-top: 1px solid #2e2a26;
+}
+
+.level {
+  color: var(--editor-dim);
+  font-family: Consolas, "Cascadia Mono", "SFMono-Regular", ui-monospace, monospace;
+  font-size: 12px;
+}
+
+.line[data-level="warn"] .level,
+.line[data-level="error"] .level {
+  color: #e2c48a;
+}
+
+.line[data-level="error"] .text {
+  color: #f0b4a8;
+}
+
+.call,
+.text {
+  margin: 0;
+  font-family: Consolas, "Cascadia Mono", "SFMono-Regular", ui-monospace, monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.call {
+  grid-column: 2;
+  color: var(--editor-dim);
+}
+
+.text {
+  grid-column: 2;
+}

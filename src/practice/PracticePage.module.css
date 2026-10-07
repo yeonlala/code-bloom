@@ -1,0 +1,93 @@
+.page {
+  display: grid;
+  grid-template-columns: 232px minmax(0, 1fr);
+  gap: 28px;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 16px 24px 64px;
+  align-items: start;
+}
+
+.work {
+  min-width: 0;
+}
+
+.heading {
+  margin-bottom: 8px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 8px;
+}
+
+.title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 640;
+  letter-spacing: -0.03em;
+}
+
+.badge {
+  color: var(--pass);
+  background: var(--pass-bg);
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.task {
+  margin: 0 0 16px;
+  line-height: 1.65;
+}
+
+.label {
+  margin: 18px 0 8px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.run,
+.secondary {
+  height: 36px;
+  padding: 0 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.run {
+  color: var(--surface);
+  background: var(--kept);
+  border: 1px solid var(--kept);
+}
+
+.secondary {
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--line);
+}
+
+.run:disabled,
+.secondary:disabled {
+  cursor: default;
+  opacity: 0.4;
+}
+
+@media (max-width: 840px) {
+  .page {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
